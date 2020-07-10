@@ -5,7 +5,13 @@ A predicate function is one that returns true or false.
 The filter() function should return a new array that contains only the items from the original array for which the predicate function returns true. 
  */
 function filter (items, predicate) {
-    return [];
+    newArray = []
+    for (let i = 0; i <items.length; i++){
+        if(predicate(items[i])) {
+            newArray.push(items[i])
+        }
+    }
+    return newArray;
 }
 
 const ages = [12, 14, 19, 20, 21, 22, 25, 30, 40];
